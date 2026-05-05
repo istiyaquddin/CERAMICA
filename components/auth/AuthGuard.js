@@ -5,12 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-/**
- * AuthGuard Component
- * 
- * Protects children from unauthorized access.
- * Redirects to /login if user is not authenticated.
- */
+
 export default function AuthGuard({ children }) {
   const { user, loading } = useAuth();
   const router = useRouter();
