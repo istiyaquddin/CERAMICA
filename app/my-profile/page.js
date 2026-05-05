@@ -7,12 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-/**
- * My Profile Page
- * 
- * Shows user information and logout functionality.
- * Protected by AuthGuard.
- */
+
 function ProfileContent() {
   const { user, logout } = useAuth();
 
