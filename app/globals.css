@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@theme {
+  /* Precise Luxury Palette from Design Reference */
+  --color-primary-text: #F9F9F9;
+  --color-secondary-text: #757575;
+  --color-muted-text: #4B5563;
+  
+  --color-bg-deep: #1A1A1A; /* Updated from screenshot */
+  --color-surface: #242424;
+  --color-border: #333333;
+  --color-accent: #C5A059; /* Gold Accent */
+  --color-neutral: #F9F9F9;
+
+  /* Typography */
+  --font-manrope: "Manrope", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* Spacing */
+  --spacing-stack-lg: 80px;
+  --spacing-stack-md: 32px;
+  --spacing-stack-sm: 16px;
+  --spacing-container-max: 1440px;
+}
+
+@layer base {
+  :root {
+    --background: #1A1A1A;
+    --foreground: #F9F9F9;
+    --border: #333333;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    min-height: 100vh;
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-manrope);
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  /* Master Transition */
+  .transition-premium {
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Luxury Obsidian Shadows */
+  .luxury-shadow {
+    box-shadow: 
+      0 10px 15px -3px rgba(0, 0, 0, 0.5),
+      0 4px 6px -4px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Premium Glassmorphism */
+  .glass-header {
+    @apply backdrop-blur-3xl;
+    background-color: rgba(26, 26, 26, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  /* Text Reveal Animation */
+  .reveal-text {
+    @apply overflow-hidden relative inline-block;
+  }
+  
+  .reveal-text::after {
+    content: '';
+    @apply absolute inset-0 bg-accent transform origin-left scale-x-0 transition-transform duration-700 ease-in-out;
+  }
+
+  /* Link Hover Underline Animation */
+  .hover-underline {
+    @apply relative py-1;
+  }
+  
+  .hover-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[1px] bg-accent transform scale-x-0 origin-right transition-transform duration-500 ease-in-out;
+  }
+  
+  .hover-underline:hover::after {
+    @apply scale-x-100 origin-left;
+  }
+
+  /* Premium Card Implementation */
+  .card-premium {
+    @apply rounded-2xl overflow-hidden;
+    background-color: #242424;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    transition: all 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .card-premium:hover {
+    transform: translateY(-12px);
+    border-color: rgba(197, 160, 89, 0.3);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7);
+  }
+
+  /* Image Effects */
+  .image-zoom {
+    transition: transform 1200ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .group:hover .image-zoom {
+    transform: scale(1.1);
+  }
+
+  .image-overlay {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-700;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+  }
+
+  .group:hover .image-overlay {
+    @apply opacity-100;
+  }
+
+  /* Luxury Button */
+  .premium-btn {
+    @apply active:scale-95;
+    transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .premium-btn:hover {
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.2);
+    transform: translateY(-2px);
+  }
+}
