@@ -9,15 +9,7 @@ import { useEffect, useState } from "react";
 
 import toast from "react-hot-toast";
 
-/**
- * Login Page
- *
- * Features:
- * - Email/Password authentication
- * - Google Login integration
- * - Loading states & Error handling
- * - Success redirect
- */
+
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
