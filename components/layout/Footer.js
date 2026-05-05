@@ -1,11 +1,6 @@
 import Link from "next/link";
 
-/**
- * Footer Component
- * 
- * Provides site navigation, branding, and contact information.
- * Uses a clean, minimalist design consistent with the architectural theme.
- */
+
 export default function Footer() {
   return (
     <footer className="bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800">
