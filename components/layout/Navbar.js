@@ -7,14 +7,7 @@ import { Menu, User, LogOut, X } from "lucide-react";
 import { useAuth } from "@/context/AuthContext";
 import { motion, AnimatePresence } from "framer-motion";
 
-/**
- * Navbar Component
- * 
- * Features:
- * - Left: Logo
- * - Center: Home, All Tiles, My Profile (conditional)
- * - Right: Auth Actions (Login/Signup or Avatar/Logout)
- */
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
