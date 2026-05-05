@@ -15,14 +15,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
-/**
- * Register Page
- *
- * Features:
- * - New user registration with Name, Email, Photo URL, and Password
- * - Google Auth integration
- * - Redirect to Login on success
- */
 export default function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
