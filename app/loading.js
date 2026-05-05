@@ -1,9 +1,4 @@
-/**
- * Loading Component
- * 
- * Displayed during route transitions or data fetching.
- * Minimalist design ensures a smooth user experience.
- */
+
 export default function Loading() {
   return (
     <div className="h-screen w-full flex items-center justify-center bg-surface dark:bg-black">
