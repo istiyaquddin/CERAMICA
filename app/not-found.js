@@ -1,11 +1,7 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
-/**
- * 404 Not Found Page
- * 
- * Elegant error page that guides users back to the gallery.
- */
+
 export default function NotFound() {
   return (
     <div className="h-screen flex flex-col items-center justify-center px-8 text-center space-y-8 bg-stone-50 dark:bg-stone-900">
