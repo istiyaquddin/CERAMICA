@@ -2,16 +2,6 @@
 
 import { Search, ChevronDown } from "lucide-react";
 
-/**
- * FilterBar Component
- * 
- * Handles search input and dropdown filters for material, size, and finish.
- * 
- * Props:
- * - onSearch: Function to handle search input change
- * - onFilter: Function to handle dropdown filter change
- * - filters: Current filter states
- */
 export default function FilterBar({ onSearch, onFilter, filters }) {
   return (
     <section className="mb-stack-md">
