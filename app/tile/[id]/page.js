@@ -9,15 +9,7 @@ import { motion } from "framer-motion";
 
 import AuthGuard from "@/components/auth/AuthGuard";
 
-/**
- * Tile Details Page
- * 
- * Renders full information for a specific tile.
- * Features:
- * - Dynamic data fetching based on URL ID
- * - Specification breakdown with icons
- * - Responsive layout (Image vs Info)
- */
+
 function TileContent() {
   const { id } = useParams();
   const router = useRouter();
