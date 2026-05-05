@@ -5,14 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-/**
- * TileCard Component
- * 
- * Displays a single tile product with premium hover animations.
- * 
- * Props:
- * - tile: Object containing tile data (id, title, series, dimensions, image)
- */
+
 export default function TileCard({ tile }) {
   const item = {
     hidden: { opacity: 0, y: 30 },
